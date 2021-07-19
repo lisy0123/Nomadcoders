@@ -1,5 +1,8 @@
 .DS_store
 
+Web_Scrapper/__pycache__
+Web_Scrapper/challenge/tmp/
+
 react_native_weather/
 
 # Logs
