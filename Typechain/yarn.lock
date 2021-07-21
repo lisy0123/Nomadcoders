@@ -22,6 +22,11 @@
   "resolved" "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.1.tgz"
   "version" "1.0.1"
 
+"@types/crypto-js@^4.0.2":
+  "integrity" "sha512-sCVniU+h3GcGqxOmng11BRvf9TfN9yIs8KKjB8C8d75W69cpTfZG80gau9yTx5SxF3gvHGbJhdESzzvnjtf3Og=="
+  "resolved" "https://registry.npmjs.org/@types/crypto-js/-/crypto-js-4.0.2.tgz"
+  "version" "4.0.2"
+
 "@types/node@*", "@types/node@^16.3.3":
   "integrity" "sha512-8h7k1YgQKxKXWckzFCMfsIwn0Y61UK6tlD6y2lOb3hTOIMlK3t9/QwHOhc81TwU+RMf0As5fj7NPjroERCnejQ=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-16.3.3.tgz"
@@ -55,6 +60,11 @@
     "path-key" "^3.1.0"
     "shebang-command" "^2.0.0"
     "which" "^2.0.1"
+
+"crypto-js@^4.0.0":
+  "integrity" "sha512-bzHZN8Pn+gS7DQA6n+iUmBfl0hO5DJq++QP3U6uTucDtk/0iGpXd/Gg7CGR0p8tJhofJyaKoWBuJI4eAO00BBg=="
+  "resolved" "https://registry.npmjs.org/crypto-js/-/crypto-js-4.0.0.tgz"
+  "version" "4.0.0"
 
 "diff@^4.0.1":
   "integrity" "sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A=="
