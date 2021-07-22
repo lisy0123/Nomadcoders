@@ -2,6 +2,13 @@
 <html>
 
 <head>
+	<title> Nomad News | 
+	{% if word == "new" %}
+		New
+	{% else %}
+		Popular
+	{% endif %}
+	</title>
 	<link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
 </head>
 
@@ -20,6 +27,7 @@
 				<a href="/?order_by=new">New</a>
 			{% endif %}
 		</div>
+	</header>
 		<main>
 		{% for story in stories %}
 			<div>
@@ -28,9 +36,7 @@
 						<h3>{{story.title}}</h3>
 					</a>
 					 (
-					<a href="{{story.url}}" target="_blanl">
-						{{story.url}}
-					</a>
+					<a href="{{story.url}}" target="_blanl">{{story.url}}</a>
 					) 
 				</div>
 				<div> {{story.points}} points | By: {{story.author}} | {{story.num_comments}} comments </div>
@@ -38,7 +44,6 @@
 			<hr>
 		{% endfor %}
 		</main>
-	</header>
 </body>
 
 </html>

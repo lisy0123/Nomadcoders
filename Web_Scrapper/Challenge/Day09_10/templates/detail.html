@@ -2,7 +2,10 @@
 <html>
 
 <head>
-  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+	<title>
+		 Nomad News | {{title}}
+	</title>
+	<link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -17,7 +20,7 @@
 		{% for story in stories %}
 			{% if story.author %}
 				<div>
-					<strong>{{story.author}}</strong>
+					<strong>{{story.author}}:</strong>
 					<p></p>
 					<p>{{story.text|safe}}</p>
 					<p></p>
