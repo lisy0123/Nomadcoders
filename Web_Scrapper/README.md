@@ -1,7 +1,8 @@
-# Web_Scrapper
+# Typechain
 
-Web scrapper with python
+Simple Blockchain with Typescript
 
-:label:  Updating...
+:bulb: Rechecking...
 
 [↩️ Go Back](https://github.com/lisy0123/Nomadcoders)
+
