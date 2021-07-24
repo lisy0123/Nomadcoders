@@ -1,0 +1,114 @@
+@font-face {
+	font-family: 'abster';
+	src: url('abster-webfont.woft2') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {	
+	background: radial-gradient(#555, black) fixed;
+}
+.container {
+	max-width: 100%;
+	height: 100vh;
+	align-items: center;
+}
+header {
+	width: 93%;
+	height: 6rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+header>a {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.6rem;
+	font-weight: 800;
+	text-decoration: none;
+	color: #ddd;
+}
+header>a:hover {
+	color: white;
+}
+header>ul {
+	display: flex;
+	padding: 0.2rem;
+}
+header>ul>li {
+	display: inline-block;
+	margin-left: 1rem;
+}
+header>ul>li>a {
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #bbb;
+	padding-bottom: .5px;
+}
+header>ul>li>a:hover {
+	color: white;
+	border-bottom: 2px solid white;
+}
+@media screen and (max-width:600px) {
+	header {
+		flex-direction: column;
+	}
+}
+section {
+	position: absolute;
+	left:50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+section>p {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: 2.5rem;
+	font-weight: 900;
+	color: white;
+	margin-bottom: 0.8rem;
+}
+section>form>input[type="text"] {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	width: 28rem;
+	height: 3rem;
+	clear: none;
+	float: none;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 1.2rem;
+	font-weight: 200;
+	color: #ddd;
+	caret-color: #ddd;
+	text-align: center;
+	border-bottom: 2px solid #777;
+	box-shadow: 0 1px 0 0 #777;
+	position: relative;
+}
+section>form>input[type="text"]:focus {
+	border-bottom: 2px solid #ddd;
+	box-shadow: 0 1px 0 0 #ddd;
+}
+footer {
+	position:absolute;
+	left:50%;
+	top: 96%;
+	transform: translate(-50%, -96%);
+	text-align: center;
+	font-size: 1rem;
+	color: #777;
+}
+footer>a {
+	color: #bbb;
+}
+footer>a:hover {
+	color: white;
+}
