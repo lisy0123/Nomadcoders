@@ -148,6 +148,7 @@ table {
 	text-align: center;
 	color: #ccc;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-collapse: collapse;
 }
 table th {
 	height: 3.5rem;

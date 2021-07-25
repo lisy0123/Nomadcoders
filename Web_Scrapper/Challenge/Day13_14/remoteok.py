@@ -32,6 +32,6 @@ def extract_jobs(url):
 def get_jobs(word):
 	url = f"https://remoteok.io/remote-{word}-jobs"
 	jobs = extract_jobs(url)
-	print("RE: ", len(jobs), url)
+	#print("RE: ", len(jobs), url)
 	return (jobs)
 

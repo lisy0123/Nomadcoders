@@ -18,7 +18,7 @@ def extract_job(html):
 def extract_jobs(url, last_page):
 	jobs= []
 	for page in range(1, last_page+1):
-		print(f"Scrapping SO: {page}")
+		#print(f"Scrapping SO: {page}")
 		result = requests.get(f"{url}&pg={page}")
 		soup = BeautifulSoup(result.text, "html.parser")
 		results = soup.find_all("div", {"class": "-job"})
@@ -46,9 +46,9 @@ def get_jobs(word):
 	url = f"https://stackoverflow.com/jobs?r=True&q={word}"
 	last_page = get_last_page(url)
 	if last_page == 0:
-		print("SO: 0", url)
+		#print("SO: 0", url)
 		return ([])
 	else:
 		jobs = extract_jobs(url, last_page)
-		print("SO: ", len(jobs), url)
+		#print("SO: ", len(jobs), url)
 		return (jobs)

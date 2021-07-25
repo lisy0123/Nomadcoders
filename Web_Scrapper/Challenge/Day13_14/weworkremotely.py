@@ -36,6 +36,6 @@ def extract_jobs(url):
 def get_jobs(word):
 	url = f"https://weworkremotely.com/remote-jobs/search?term={word}"
 	jobs = extract_jobs(url)
-	print("WE: ", len(jobs), url)
+	#print("WE: ", len(jobs), url)
 	return (jobs)
 
