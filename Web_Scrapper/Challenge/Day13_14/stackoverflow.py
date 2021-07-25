@@ -31,14 +31,24 @@ def extract_jobs(url, last_page):
 def get_last_page(url):
 	result = requests.get(url)
 	soup = BeautifulSoup(result.text, "html.parser")
-	pages = soup.find("div", {"class": "s-pagination"}).find_all("a")
-	last_page = pages[-2].get_text(strip = True)
-	return (int(last_page))
+	if soup.find("p", {"class": "ws-pre-wrap"}):
+		return (0)
+	else:
+		try:
+			pages = soup.find("div", {"class": "s-pagination"}).find_all("a")
+			last_page = pages[-2].get_text(strip = True)
+			return (int(last_page))
+		except:
+			return (1)
 
 
 def get_jobs(word):
 	url = f"https://stackoverflow.com/jobs?r=True&q={word}"
 	last_page = get_last_page(url)
-	jobs = extract_jobs(url, last_page)
-	print("SO: ", last_page, len(jobs), url)
-	return (jobs)
+	if last_page == 0:
+		print("SO: 0", url)
+		return ([])
+	else:
+		jobs = extract_jobs(url, last_page)
+		print("SO: ", len(jobs), url)
+		return (jobs)
