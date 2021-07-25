@@ -10,11 +10,9 @@ Web scrapper with python
 
 ### Recommended project
 
-- [**Final Challenge**](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper/Challenge/Day13_14)
+- **Final Challenge**
 
-  ![image1](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image1.png)![image2](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image2.png)
-
-  ![image3](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image3.png)![image4](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper/Challenge/Day13_!4/image/image4.png)
+  ![image1](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image1.png) ![image3](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image3.png)
 
 :label:  Updating...
 
