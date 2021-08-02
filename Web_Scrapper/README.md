@@ -14,9 +14,11 @@ Web scrapper with python
 
 - [**Final Challenge**](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper/Challenge/Day13_14)
 
-  ![image1](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image1.png) ![image3](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image3.png)
+  <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image1.png" width="48%" height="60%"> <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image3.png" width="48%" height="60%">
 
-  ![image2](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image2.png)![image4](https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image4.png)
+  <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image2.png" width="48%" height="60%"> <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image4.png" width="48%" height="60%">
+  
+  <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/done.png" alt="done" style="zoom:80%;" />
 
 [↩️ Go Back](https://github.com/lisy0123/Nomadcoders)
 
