@@ -6,7 +6,7 @@ Web scrapper with python
 
 ```
 .			: Code that scraps job openings from the Indeed/Stackoverflow sites
-			   & downloads them as a .csv file.
+│			   & downloads them as a .csv file.
 ├── Challenge		: Python 2-week challenge
 │   ├── Day09_10
 │   ├── Day11_12
