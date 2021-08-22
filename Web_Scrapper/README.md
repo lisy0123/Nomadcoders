@@ -5,12 +5,12 @@ Web scrapper with python
 **:heavy_check_mark: Challenge Date: July 12, 2021 ~ July 25, 2021**
 
 ```
-.												: Code that scraps job openings from the Indeed/Stackoverflow sites
-												   & downloads them as a .csv file.
-├── Challenge						: Python 2-week challenge
+.			: Code that scraps job openings from the Indeed/Stackoverflow sites
+			   & downloads them as a .csv file.
+├── Challenge		: Python 2-week challenge
 │   ├── Day09_10
 │   ├── Day11_12
-│   └── Day13_14				: Final challenge
+│   └── Day13_14	: Final challenge
 └── Scrapper_with_Flask : Displays scraped data on a web page by linking Flask
 ```
 
