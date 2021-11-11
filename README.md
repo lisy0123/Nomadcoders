@@ -2,7 +2,7 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## Momentum Clone
+## [:one: Momentum Clone]()
 
 Momentum Clone with JS
 
@@ -10,7 +10,7 @@ Momentum Clone with JS
 
 ---
 
-## [:desktop_computer: Web Scrapper](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper)
+## [:two: Web Scrapper](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper)
 
 Web scrapper with python
 
@@ -24,7 +24,7 @@ Web scrapper with python
 
 ---
 
-## [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
+## [:three: React Native Weather App](https://github.com/lisy0123/react_native_weather)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
 
@@ -32,7 +32,7 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 
 ---
 
-## ETC
+## :four: ETC
 
 ### [:art: Painter](https://github.com/lisy0123/Painter)
 
