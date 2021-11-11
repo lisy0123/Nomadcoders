@@ -2,7 +2,15 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## [:desktop_computer: Web_Scrapper](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper)
+## Momentum Clone
+
+Momentum Clone with JS
+
+**:heavy_check_mark: Challenge Date: November 15, 2021 ~ November 28, 2021**
+
+---
+
+## [:desktop_computer: Web Scrapper](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper)
 
 Web scrapper with python
 
@@ -14,11 +22,9 @@ Web scrapper with python
 
 <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/done.png" alt="done" style="zoom:80%;" />
 
-:label:  Updating...
-
 ---
 
-## [:cloud: React_Native_Weather_App](https://github.com/lisy0123/react_native_weather)
+## [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
 
@@ -26,7 +32,13 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 
 ---
 
-## [:chains: Typechain](https://github.com/lisy0123/Nomadcoders/tree/main/Typechain)
+### [:art: Painter](https://github.com/lisy0123/Painter)
+
+Painting Board made with VaillaJS
+
+---
+
+### [:chains: Typechain](https://github.com/lisy0123/Nomadcoders/tree/main/Typechain)
 
 Simple Blockchain with Typescript
 
