@@ -32,17 +32,15 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 
 ---
 
+## ETC
+
 ### [:art: Painter](https://github.com/lisy0123/Painter)
 
 Painting Board made with VaillaJS
 
----
-
 ### [:chains: Typechain](https://github.com/lisy0123/Nomadcoders/tree/main/Typechain)
 
 Simple Blockchain with Typescript
-
-:bulb: Rechecking...
 
 [↩️ Go Back](https://github.com/lisy0123/Study)
 
