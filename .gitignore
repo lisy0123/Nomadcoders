@@ -1,9 +1,12 @@
 .DS_store
+*/.DS_store
 
 Web_Scrapper/__pycache__
 Web_Scrapper/Scrapper_with_Flask/__pycache__
 
 react_native_weather/
+
+Painter/
 
 # Logs
 Typechain/logs
