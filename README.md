@@ -2,7 +2,7 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## [:one: Momentum Clone]()
+## [:one: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
 
 Momentum Clone with JS
 
@@ -34,7 +34,7 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 
 ## :four: ETC
 
-### [:art: Painterhttps://github.com/lisy0123/Nomadcoders/tree/main/Painter]()
+### [:art: Painter](https://github.com/lisy0123/Nomadcoders/tree/main/Painter)
 
 Painting Board made with VaillaJS
 
