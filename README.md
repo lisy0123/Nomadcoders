@@ -34,7 +34,7 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 
 ## :four: ETC
 
-### [:art: Painter](https://github.com/lisy0123/Painter)
+### [:art: Painterhttps://github.com/lisy0123/Nomadcoders/tree/main/Painter]()
 
 Painting Board made with VaillaJS
 

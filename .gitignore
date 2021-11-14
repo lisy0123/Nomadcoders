@@ -1,6 +1,8 @@
 .DS_store
 */.DS_store
 
+Momentum_Clone/
+
 Web_Scrapper/__pycache__
 Web_Scrapper/Scrapper_with_Flask/__pycache__
 
