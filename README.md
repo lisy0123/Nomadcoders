@@ -6,7 +6,7 @@ Studying python, javascript, react, typescript, ect with **[nomadcoders](https:/
 
 Momentum Clone with JS
 
-**:heavy_check_mark: Challenge Date: November 15, 2021 ~ November 28, 2021**
+**:heavy_check_mark: Challenge Date: **
 
 ---
 
