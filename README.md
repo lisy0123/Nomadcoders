@@ -6,7 +6,7 @@ Studying python, javascript, react, typescript, ect with **[nomadcoders](https:/
 
 Momentum Clone with JS
 
-**:heavy_check_mark: Challenge Date: **
+**:heavy_check_mark: Challenge Date:**
 
 ---
 
