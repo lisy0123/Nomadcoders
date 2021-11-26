@@ -10,9 +10,9 @@ Momentum Clone with JS
 
 ---
 
-## [:two: Web Scrapper](https://github.com/lisy0123/Nomadcoders/tree/main/Web_Scrapper)
+## [:two: Web Scrapper](https://github.com/lisy0123/Web_Scrapper)
 
-Web scrapper with python
+Web Scrapper with Python
 
 **:heavy_check_mark: Challenge Date: July 12, 2021 ~ July 25, 2021**
 
