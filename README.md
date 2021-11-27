@@ -16,11 +16,7 @@ Web Scrapper with Python
 
 **:heavy_check_mark: Challenge Date: July 12, 2021 ~ July 25, 2021**
 
-<img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image1.png" width="48%" height="60%"> <img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/Challenge/Day13_14/image/image3.png" width="48%" height="60%">
-
-### :pushpin: ​Outstanding graduates
-
-<img src="https://github.com/lisy0123/Nomadcoders/blob/main/Web_Scrapper/done.png" alt="done" style="zoom:80%;" />
+<img src="https://github.com/lisy0123/Web_Scrapper/blob/main/Challenge/Day13_14/image/image1.png" width="48%" height="60%"> <img src="https://github.com/lisy0123/Web_Scrapper/blob/main/Challenge/Day13_14/image/image3.png" width="48%" height="60%">
 
 ---
 
