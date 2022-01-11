@@ -8,6 +8,8 @@ Zoom Clone with NodeJS, WebRTC and Websockets
 
 **:heavy_check_mark: Challenge Date: Dec 27, 2021 - Jan 2, 2022**
 
+<img src="https://github.com/lisy0123/Zoom_Clone/blob/main/img.png" alt="img" style="zoom:65%;" />
+
 ---
 
 ## [:two: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
