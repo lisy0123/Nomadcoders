@@ -6,9 +6,9 @@ Studying python, javascript, react, typescript, ect with **[nomadcoders](https:/
 
 Read developer's recommendation books and write TIL(Today I Learned).
 
-|                             Book                             | Challenge Date              |
-| :----------------------------------------------------------: | :-------------------------- |
-| [**Clean Code**](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code) | Feb 18, 2022 - Mar 11, 2022 |
+### [**1. Clean Code**](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code)
+
+**:heavy_check_mark: Challenge Date: Feb 18, 2022 - Mar 11, 2022**
 
 ---
 
