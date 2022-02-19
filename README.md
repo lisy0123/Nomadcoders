@@ -2,7 +2,17 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## [:one: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
+## :one: Books
+
+Read developer's recommendation books and write TIL(Today I Learned).
+
+|                             Book                             | Challenge Date              |
+| :----------------------------------------------------------: | :-------------------------- |
+| [**Clean Code**](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code) | Feb 18, 2022 - Mar 11, 2022 |
+
+---
+
+## [:two: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
 
 Zoom Clone with NodeJS, WebRTC and Websockets
 
@@ -12,7 +22,7 @@ Zoom Clone with NodeJS, WebRTC and Websockets
 
 ---
 
-## [:two: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
+## [:three: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
 
 Momentum Clone with JS
 
@@ -20,7 +30,7 @@ Momentum Clone with JS
 
 ---
 
-## [:three: Web Scrapper](https://github.com/lisy0123/Web_Scrapper)
+## [:four: Web Scrapper](https://github.com/lisy0123/Web_Scrapper)
 
 Web Scrapper with Python
 
@@ -30,15 +40,13 @@ Web Scrapper with Python
 
 ---
 
-## [:four: React Native Weather App](https://github.com/lisy0123/react_native_weather)
+## :five: ETC
+
+### [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
 
-:label:  Updating...
-
----
-
-## :five: ETC
+:label: Need to refresh!
 
 ### [:art: Painter](https://github.com/lisy0123/Nomadcoders/tree/main/Painter)
 
