@@ -79,58 +79,59 @@
 
 - <u>**의도를 분명히 밝혀라**</u>
 
-  - 변수의 존재 이유는? 수행 기능은? 사용 방법은? 따로 주석이 필요하다면 의도를 분명히 드러내지 못했다는 말이다.
+  변수의 존재 이유는? 수행 기능은? 사용 방법은? 따로 주석이 필요하다면 의도를 분명히 드러내지 못했다는 말이다.
 
-    <details>
-      <summary> code </summary>
-      <div markdown="1">
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
 
-    ```java
-    // Bad
-    public List<int[]> getThem() {
-      List<int[]> list1 = new ArrayList<int[]>();
-      for (int[] x : theList)
-        if (x[0] == 4)
-          list1.add(x);
-      return list1;
-    }
-    
-    // Good
-    public List<Cell> getFlaggedCells() {
-      List<Cell> flaggedCells = new ArrayList<Cell>();
-      for (Cell cell : gameBoard)
-        if (cell.isFlagged())
-          flaggedCells.add(cell);
-      return flaggedCells;
-    }
-    ```
+  ```java
+  // Bad
+  public List<int[]> getThem() {
+    List<int[]> list1 = new ArrayList<int[]>();
+    for (int[] x : theList)
+      if (x[0] == 4)
+        list1.add(x);
+    return list1;
+  }
+  
+  // Good
+  public List<Cell> getFlaggedCells() {
+    List<Cell> flaggedCells = new ArrayList<Cell>();
+    for (Cell cell : gameBoard)
+      if (cell.isFlagged())
+        flaggedCells.add(cell);
+    return flaggedCells;
+  }
+  ```
 
-      </div>
-    </details>
+    </div>
+  </details>
 
 - <u>**그릇된 정보를 피하라**</u>
 
-  - 일관성이 떨어지는 표기법은 그릇된 정보다.
-  - 약어를 지양하자.
+  일관성이 떨어지는 표기법은 그릇된 정보다.
+
+  약어를 지양하자.
 
 - <u>**의미 있게 구분하라**</u>
 
-  - 읽는 사람이 차이를 알도록 이름을 지어라.
+  읽는 사람이 차이를 알도록 이름을 지어라.
 
-    <details>
-      <summary> code </summary>
-      <div markdown="1">
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
 
-    ```java
-    // Bad
-    public state void copyChars(char a1[], char a2[])
-      
-    // Good
-    public state void copyChars(char source, char destination)
-    ```
+  ```java
+  // Bad
+  public state void copyChars(char a1[], char a2[])
+    
+  // Good
+  public state void copyChars(char source, char destination)
+  ```
 
-      </div>
-    </details>
+    </div>
+  </details>
 
 - <u>**발음하기 쉬운 이름을 사용하라**</u>
 
@@ -151,101 +152,109 @@
 
 - **검색하기 쉬운 이름을 사용하라**
 
-  - 이름 길이는 범위 크기에 비례해야 한다.
+  이름 길이는 범위 크기에 비례해야 한다.
 
-    <details>
-      <summary> code </summary>
-      <div markdown="1">
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
 
-    ```java
-    // Bad
-    for (int i = 0; i < 10; i++) {
-      s += i * 5;
-    }
-      
-    // Good
-    int maxIndex = 10;
-    const int MULTIPLICATION_CONDITION = 5;
-    int sum = 0;
+  ```java
+  // Bad
+  for (int i = 0; i < 10; i++) {
+    s += i * 5;
+  }
     
-    for (int i = 0; i < maxIndex; i++) {
-      sum += i * MULTIPLICATION_CONDITION;
-    }
-    ```
+  // Good
+  int maxIndex = 10;
+  const int MULTIPLICATION_CONDITION = 5;
+  int sum = 0;
+  
+  for (int i = 0; i < maxIndex; i++) {
+    sum += i * MULTIPLICATION_CONDITION;
+  }
+  ```
 
-      </div>
-    </details>
+    </div>
+  </details>
 
 - **인코딩을 피하라**
 
-  - 헝거리식 표기법을 지양하자.
+  헝거리식 표기법을 지양하자.
 
-  - 멤버 변수임을 명시하기 위해 "m_" 접두어 사용하는 것을 지양하고, 클래스와 함수는 접두어가 필요없을 정도로 작게 구현한다.
+  멤버 변수임을 명시하기 위해 "m_" 접두어 사용하는 것을 지양하고, 클래스와 함수는 접두어가 필요없을 정도로 작게 구현한다.
 
-    <details>
-      <summary> code </summary>
-      <div markdown="1">
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
 
-    ```java
-    // Bad
-    String m_dsc;
-    public interface IShapeFactory;
-    public class ShapeFactory;
-    
-    // Good
-    String description;
-    public interface ShapeFactory;
-    public class ShapeFactoryImp;
-    public class CShapeFactory;
-    ```
+  ```java
+  // Bad
+  String m_dsc;
+  public interface IShapeFactory;
+  public class ShapeFactory;
+  
+  // Good
+  String description;
+  public interface ShapeFactory;
+  public class ShapeFactoryImp;
+  public class CShapeFactory;
+  ```
 
-      </div>
-    </details>
+    </div>
+  </details>
 
 - **자신의 기억력을 자랑하지 마라**
 
-  - 전문가 프로그래머는 자신의 능력을 좋은 방향으로 사용해 남들이 이해하는 코드를 내놓는다.
+  전문가 프로그래머는 자신의 능력을 좋은 방향으로 사용해 남들이 이해하는 코드를 내놓는다.
 
 - **클래스 & 객체 이름: 명사, 명사구**
 
-  - `Customer, WikiPage, AddressParser`
+  `Customer, WikiPage, AddressParser`
 
 - **메서드 이름: 동사, 동사구**
 
-  - 접근자, 변경자, 조건자는 Javabean 표준에 따라 get, set, is 붙이기.
+  접근자, 변경자, 조건자는 Javabean 표준에 따라 get, set, is 붙이기.
 
-    <details>
-      <summary> code </summary>
-      <div markdown="1">
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
 
-    ```java
-    string name = employee.getName();
-    customer.setName("mike");
-    if (paycheck.isPosted())...
-    
-    // Bad
-    Complex fulcrumPoint = new Complex(10.0)
-    
-    // Good
-    Complex fulcrumPoint = Complex.FromRealNumber(10.0)
-    ```
+  ```java
+  string name = employee.getName();
+  customer.setName("mike");
+  if (paycheck.isPosted())...
+  
+  // Bad
+  Complex fulcrumPoint = new Complex(10.0)
+  
+  // Good
+  Complex fulcrumPoint = Complex.FromRealNumber(10.0)
+  ```
 
-      </div>
-    </details>
+    </div>
+  </details>
 
 - **기발한 이름은 피하라**
 
-  - 의도를 분명하고 솔직하게 표현하라.
+  의도를 분명하고 솔직하게 표현하라.
 
 - **한 개념에 한 단어를 사용하라**
 
-  - 메서드 이름은 독자적이고 일관적이어야 한다.
+  메서드 이름은 독자적이고 일관적이어야 한다.
 
 - **말장난을 하지 마라**
 
-  - 한 개념에 한 단어를 사용하되, 일관성을 고려한다.
+  한 개념에 한 단어를 사용하되, 일관성을 고려한다.
 
 - <u>**해법 영역, 문제 영역에서 가져온 이름을 사용하라**</u>
+
+  - **해법 영역 (Solution Domain)**
+
+    개발자라면 당연히 알고 있을 전산용어, 알고리즘 이름, 패턴 이름, 수학 용어 등은 사용하자. `JobQueue`, `AccountVisitor(Visitor pattern)` 등
+
+  - **문제 영역 (Problem Domain)**
+
+    실제 도메인의 전문가에게 의미를 물어 파악할 수 있도록 문제 영역에서 이름을 가져오자.
 
 - **의미 있는 맥락을 추가하라**
 
@@ -326,13 +335,11 @@
 
 ### 📌 소감 및 생각
 
-코드가 길어지면 길어질수록 각 변수나 함수들의 이름들은 다채로워진다. 한끗 차이인 이름을 가지고 고민한 적도, 이미 존재하는 함수명 때문에 골머리를 앓은 적도 있었다. 개인적으로 이름이 긴 것을 싫어하다보니 약어을 자주 사용했었는데 앞으로는 지양해야겠다. 내가 신경써야겠다고 생각하는 부분들은 따로 언더라인을 쳐놓았다. 그 중에서 발음하기 쉬운 이름은 생각도 안 해봤는데 새롭게 알아간다. 영어가 주언어가 아니다보니 발음까지는 크게 신경쓰지 않았던 것 같다.
+코드가 길어지면 길어질수록 각 변수나 함수들의 이름들은 다채로워진다. 한끗 차이인 이름을 가지고 고민한 적도, 이미 존재하는 함수명 때문에 골머리를 앓은 적도 있었다. 개인적으로 이름이 긴 것을 싫어하다보니 약어를 자주 사용했었는데 앞으로는 지양해야겠다. 내가 신경써야겠다고 생각하는 부분들은 따로 언더라인을 쳐놓았다. 그 중에서 발음하기 쉬운 이름은 생각도 안 해봤는데 새롭게 알아간다. 영어가 주언어가 아니다보니 발음까지는 크게 신경쓰지 않았던 것 같다.
 
 ### 🔎 새롭게 배운 개념
 
 - 불용어(Noise word): 없어도 의미 전달에 영향이 없는 단어
-- 해법 영역 (Solution Domain): 개발자라면 당연히 알고 있을 전산용어, 알고리즘 이름, 패턴 이름, 수학 용어 등은 사용하자. `JobQueue`, `AccountVisitor(Visitor pattern)` 등
-- 문제 영역 (Problem Domain): 실제 도메인의 전문가에게 의미를 물어 파악할 수 있도록 문제 영역에서 이름을 가져오자.
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
