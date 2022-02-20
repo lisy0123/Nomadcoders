@@ -81,32 +81,32 @@
 
   - 변수의 존재 이유는? 수행 기능은? 사용 방법은? 따로 주석이 필요하다면 의도를 분명히 드러내지 못했다는 말이다.
 
-  <details>
-    <summary> code </summary>
-    <div markdown="1">
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
 
-  ```java
-  // Bad
-  public List<int[]> getThem() {
-    List<int[]> list1 = new ArrayList<int[]>();
-    for (int[] x : theList)
-      if (x[0] == 4)
-        list1.add(x);
-    return list1;
-  }
-  
-  // Good
-  public List<Cell> getFlaggedCells() {
-    List<Cell> flaggedCells = new ArrayList<Cell>();
-    for (Cell cell : gameBoard)
-      if (cell.isFlagged())
-        flaggedCells.add(cell);
-    return flaggedCells;
-  }
-  ```
+    ```java
+    // Bad
+    public List<int[]> getThem() {
+      List<int[]> list1 = new ArrayList<int[]>();
+      for (int[] x : theList)
+        if (x[0] == 4)
+          list1.add(x);
+      return list1;
+    }
+    
+    // Good
+    public List<Cell> getFlaggedCells() {
+      List<Cell> flaggedCells = new ArrayList<Cell>();
+      for (Cell cell : gameBoard)
+        if (cell.isFlagged())
+          flaggedCells.add(cell);
+      return flaggedCells;
+    }
+    ```
 
-    </div>
-  </details>
+      </div>
+    </details>
 
 - <u>**그릇된 정보를 피하라**</u>
 
@@ -117,20 +117,20 @@
 
   - 읽는 사람이 차이를 알도록 이름을 지어라.
 
-  <details>
-    <summary> code </summary>
-    <div markdown="1">
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
 
-  ```java
-  // Bad
-  public state void copyChars(char a1[], char a2[])
-    
-  // Good
-  public state void copyChars(char source, char destination)
-  ```
+    ```java
+    // Bad
+    public state void copyChars(char a1[], char a2[])
+      
+    // Good
+    public state void copyChars(char source, char destination)
+    ```
 
-    </div>
-  </details>
+      </div>
+    </details>
 
 - <u>**발음하기 쉬운 이름을 사용하라**</u>
 
@@ -153,53 +153,54 @@
 
   - 이름 길이는 범위 크기에 비례해야 한다.
 
-  <details>
-    <summary> code </summary>
-    <div markdown="1">
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
 
-  ```java
-  // Bad
-  for (int i = 0; i < 10; i++) {
-    s += i * 5;
-  }
+    ```java
+    // Bad
+    for (int i = 0; i < 10; i++) {
+      s += i * 5;
+    }
+      
+    // Good
+    int maxIndex = 10;
+    const int MULTIPLICATION_CONDITION = 5;
+    int sum = 0;
     
-  // Good
-  int maxIndex = 10;
-  const int MULTIPLICATION_CONDITION = 5;
-  int sum = 0;
-  
-  for (int i = 0; i < maxIndex; i++) {
-    sum += i * MULTIPLICATION_CONDITION;
-  }
-  ```
+    for (int i = 0; i < maxIndex; i++) {
+      sum += i * MULTIPLICATION_CONDITION;
+    }
+    ```
 
-    </div>
-  </details>
+      </div>
+    </details>
 
 - **인코딩을 피하라**
 
   - 헝거리식 표기법을 지양하자.
+
   - 멤버 변수임을 명시하기 위해 "m_" 접두어 사용하는 것을 지양하고, 클래스와 함수는 접두어가 필요없을 정도로 작게 구현한다.
 
-  <details>
-    <summary> code </summary>
-    <div markdown="1">
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
 
-  ```java
-  // Bad
-  String m_dsc;
-  public interface IShapeFactory;
-  public class ShapeFactory;
-  
-  // Good
-  String description;
-  public interface ShapeFactory;
-  public class ShapeFactoryImp;
-  public class CShapeFactory;
-  ```
+    ```java
+    // Bad
+    String m_dsc;
+    public interface IShapeFactory;
+    public class ShapeFactory;
+    
+    // Good
+    String description;
+    public interface ShapeFactory;
+    public class ShapeFactoryImp;
+    public class CShapeFactory;
+    ```
 
-    </div>
-  </details>
+      </div>
+    </details>
 
 - **자신의 기억력을 자랑하지 마라**
 
@@ -213,24 +214,24 @@
 
   - 접근자, 변경자, 조건자는 Javabean 표준에 따라 get, set, is 붙이기.
 
-  <details>
-    <summary> code </summary>
-    <div markdown="1">
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
 
-  ```java
-  string name = employee.getName();
-  customer.setName("mike");
-  if (paycheck.isPosted())...
-  
-  // Bad
-  Complex fulcrumPoint = new Complex(10.0)
-  
-  // Good
-  Complex fulcrumPoint = Complex.FromRealNumber(10.0)
-  ```
+    ```java
+    string name = employee.getName();
+    customer.setName("mike");
+    if (paycheck.isPosted())...
+    
+    // Bad
+    Complex fulcrumPoint = new Complex(10.0)
+    
+    // Good
+    Complex fulcrumPoint = Complex.FromRealNumber(10.0)
+    ```
 
-    </div>
-  </details>
+      </div>
+    </details>
 
 - **기발한 이름은 피하라**
 
