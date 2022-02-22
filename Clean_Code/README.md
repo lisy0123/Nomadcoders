@@ -345,7 +345,172 @@
 
 ### 🔎 새롭게 배운 개념
 
+- [헝거리식 표기법](https://itwiki.kr/w/%ED%97%9D%EA%B0%80%EB%A6%AC%EC%95%88_%ED%91%9C%EA%B8%B0%EB%B2%95): 프로그래밍 언어에서 변수 및 함수의 인자 이름 앞에 데이터 타입을 명시하는 코딩 규칙
+
 - 불용어(Noise word): 없어도 의미 전달에 영향이 없는 단어
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
+
+---
+
+## 3. 함수
+
+> Day 05 (Feb 22, 2022)
+>
+> Day 06 (Feb 23, 2022)
+
+### :book: 기억하고 싶은 책 내용
+
+- **작게 만들어라!**
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+  ```java
+  // 설정(setup) 페이지와 해제(teardown) 페이지를 테스트 페이지에 넣은 후 해당 테스트 페이지를 HTML로 렌더링하는 함수.
+  public static String renderPageWithSetupsAndTeardowns(
+    PageData pageData, boolean isSuite
+  ) throws Exception {
+    boolean isTestPage = pageData.hasAttribute("Test");
+    if (isTestPage) {
+      WikiPage testPage = pageData.getWikiPage();
+      StringBuffer newpageContent = new StringBuffer();
+      includeSetupPages(testPage, newPageContent, isSuite);
+      newPageContent.append(pageData.getContent());
+      includeTeardownPages(testPage， newPageContent, isSuite);
+      pageData.setContent(newPageContent.toString());
+    }
+    return pageData.getHtml();
+  }
+  
+  // 다음과 같이 줄일 수 있다.
+  public static String renderPageWithSetupsAndTeardowns(
+    PageData pageData, boolean isSuite) throws Exception {
+    if (isTestPage(pageData))
+      includeTeardownPages(pageData, isSuite);
+    return pageData.getHtml();
+  }
+  ```
+
+    </div>
+  </details>
+
+  - 블록과 들여쓰기
+
+    if 문/else /while 문 등에 들어가는 블록은 한 줄어야 한다.
+
+    중첩 구조가 생길만큼 함수가 커져서는 안 된다.
+
+    함수에서 들여쓰기 수준이 1, 2단을 넘어서면 안 된다.
+
+- **한 가지만 해라**
+
+  함수는 한 가지를 해야 한다. 그 한 가지를 잘 해야 한다. 그 한 가지만을 해야 한다.
+
+  단순히 다른 표현이 아니라 의미 있는 이름으로 다른 함수를 추출할 수 있다면 그 함수는 여러 작업을 하는 셈이다.
+
+  - 함수 내 섹션
+
+- **함수 당 추상화 수준은 하나로!**
+
+  함수가 확실히 한 가지 작업만 하려면 함수 내 모든 문장의 추상화 수준이 동일해야 한다.
+
+  - 아래 함수에서의 추상화 수준
+
+    `getHtml()`: 상 / `String pagePathName = PathParser.render(pagepath);`: 중 / `.append("\n")`: 하
+
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
+
+    ```java
+    public static String testableHtml(
+      PageData pageData,
+      boolean includeSuiteSetup
+    ) throws Exception {
+      Wikipage wikipage = pageData.getWikiPage();
+      StringBuffer buffer = new StringBuffer();
+      if (pageData.hasAttribute("Test")) {
+        if (includeSuiteSetup) {
+          WikiPage suiteSetup = PageCrawlerlmpl.getlnheritedPage(
+            SuiteResponder.SUITE_SETUP_NAME, wikiPage
+          );
+          if (suiteSetup != null) {
+            wikiPagePath pagePath =
+              suiteSetup.getPageCrawler().getFullPath(suiteSetup);
+            String pagePathName = PathParser.render(pagePath);
+            buffer.append("include -setup .")
+              .append(pagePathName)
+              .append("\n");
+          }
+        }
+        WikiPage setup =
+          PageCrawlerlmpl.getInheritedPage("SetUp", wikiPage);
+        if (setup != null) {
+          WikiPagePath setupPath =
+            wikiPage.getPageCrawler().getFullPath(setup);
+          String setupPathName = PathParser.render(setupPath);
+          buffer.append("!include -setup .")
+            .append(setupPathName)
+            .append("\n");
+        }
+      }
+      buffer.append(pageData.getContent());
+      if (pageData.hasAttribute("Test")) {
+        WikiPage teardown =
+          pageCrawlerlmpl.getInheritedPage("TearDown", wikiPage);
+        if (teardown != null) {
+          WikiPagePath tearDownPath =
+            wikiPage.getPageCrawler().getFullPath(teardown);
+          String tearDownPathName = PathParser.render(tearDownPath);
+          buffer.append("\n")
+            .append("!include -teardown .")
+            .append(tearDownPathName)
+            .append("\n");
+        }
+        if (includeSuiteSetup) {
+          WikiPage suiteTeardown =
+            PageCrawlerlmpl.getlnheritedPage(
+            	SuiteResponder.SUITE_TEARDOWN_NAME,
+            	wikiPage
+          );
+          if (suiteTeardown != null) {
+            Wikipagepath pagePath =
+              suiteTeardown.getPageCrawler().getFullPath (suiteTeardown);
+            String pagePathName = PathParser.render(pagePath);
+            buffer.append("!include -teardown .")
+              .append(pagePathName)
+              .append("\n");
+          }
+        }
+      }
+      pageData.setContent(buffer.toString());
+      return pageData.getHtml();                                                                                               }
+    ```
+
+      </div>
+    </details>
+
+  - 위에서 아래로 코드 읽기: **내려가기 규칙**
+
+    코드는 위에서 아래로 이야기까지 읽혀야 좋다.
+
+    위에서 아래로 프로그램을 읽으면 함수 추상화 수준이 한 번에 한 단계씩 낮아진다.
+
+- **Switch 문**
+
+  
+
+- 
+
+### 📌 소감 및 생각
+
+
+
+### 🔎 새롭게 배운 개념
+
+- 추상화 수준: 말 그대로 구체적으로 풀어 쓰기보다는 추상적으로 표현되어 있다면 추상화 수준이 높고, 추상화 되어 있지 않고 직접적인 코드는 추상화 수준이 낮다.
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
