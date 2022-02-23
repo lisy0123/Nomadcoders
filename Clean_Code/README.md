@@ -500,17 +500,328 @@
 
 - **Switch 문**
 
-  
+  다형성을 이용해, 저차원 클래스에 숨기고 절대 반복하지 않는다. 
 
-- 
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+
+  ```java
+  public Money calculatePay(Employee e)
+    throws InvalidEmplᄋyeeType {
+    switch (e.type) {
+      case COMMISSIONED:
+        return caleulateCommissionedPay(e);
+      case HOURLY:
+        return calculateHourlyPay(e);
+      case SALARIED:
+        return calculateSalariedPay(e);
+      default:
+        throw new InvalidEmployeeType(e.type);
+    }
+  }
+  ```
+
+    </div>
+  </details>
+
+  위 함수 문제점
+
+  1. 함수가 너무 길다.
+  2. 한가지 작업만 수행하지 않는다.
+  3. SRP 위반: 코드의 변경이유가 여럿이다.
+  4. OCP 위반: 새 직업의 유형이 추가 될 때마다 코드 변경 필요.
+
+  개선한 코드는 다음과 같다.
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+
+  ```java
+  public abstract class Employee {
+    public abstract boolean isPayday();
+    public abstract Money calculatePay();
+    public abstract void deliverPay(Money pay);
+  }
+  
+  public interface EmployeeFactory {
+    public Employee makeEmployee(EmployeeRecord r) throws InvalidEmployeeType;
+  }
+  
+  public class EmployeeFactorylmpl implements EmployeeFactory {
+    public Employee makeEmployee(EmployeeReco rd r) throws InvalidEmployeeType {
+      switch (r.type) {
+        case COMMISSIONED:
+          return new CommissionedEmployee(r);
+        case HOURLY:
+          return new HourlyEmployee(r);
+        case SALARIED:
+          ret니rn new SalariedEmployee(r);
+        default:
+          throw new InvalidEmp 'LoyeeType! r.type);
+      }
+    }
+  }
+  ```
+
+    </div>
+  </details>
+
+  하지만 위 규칙을 완벽하게 지키기는 어렵다.
+
+- **서술적인 이름을 사용하라!**
+
+  함수가 작고 단순할수록 서술적인 이름을 고르기도 쉬워진다.
+
+  길고 서술적인 이름이 짧고 어려운 이름보다 좋고, 길고 서술적인 주석보다 좋다.
+
+  이름을 붙일 때는 일관성이 있어야 한다.
+
+- **함수 인수**
+
+  함수에서 이상적인 인수 개수는 0개(무항)이고, 3개(삼항) 이상은 가능한 피하는 것이 좋다.
+
+  인수는 개념을 이해하기 어렵게 만든다.
+
+  테스트 관점에서 보면 인수는 더 어렵다. 갖가지 인수 조합으로 함수를 검증하는 테스트 케이스를 작성해야하기 때문이다.
+
+  - 많이 쓰는 단항 형식
+
+    함수에 인수 1개를 넘기는 이유
+
+    1. 인수에 질문을 던지는 경우
+    2. 인수를 뭔가로 변환해 결과를 반환하는 경우
+
+    3. 드물게 함수형식의 이벤트까지 존재
+
+    위 세가지의 경우가 아니라면 단항함수는 가급적 피한다.
+
+    ex) `StringBuffer`를 함수의 인수로 넘기는 것을 피한다. 변환함수에서 출력인수를 사용하면 혼란을 일으킨다.
+
+  - 플래그 인수
+
+    함수가 헌꺼번에 여러 가지를 처리한다고 대놓고 공표하는 셈으로 되도록 사용하지 않기.
+
+  - 이항 함수
+
+    인수가 2개인 함수는 인수가 1개인 함수보다 이해하기 어렵다.
+
+    불가피한 상황이 아니라면 위험이 따른다는 사실을 이해하고 가능하면 단항으로 변경해야한다.
+
+  - 삼항 함수
+
+  - 인수 객체
+
+    인수가 2~3개 필요하다면, 그 중 일부를 묶어 하나의 클래스 변수로 선언할 수도 있다.
+
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
+
+
+    ```java
+    Circle makeCircle(double x, double y, double radius);
+    Circle makeCircle(Point center, double radius);
+    // x, y를 묶어 하나의 클래스 변수로 넘기려면 결국 이름을 지어야하고, 결국은 개념을 표현하게 된다.
+    ```
+
+      </div>
+    </details>
+
+  - 인수 목록
+
+    때로는 인수가 가변적인 함수도 필요하다. ex) `String.format`
+
+    가변인수를 통해 리스트형 인수를 하나로 취급할 수 있다.
+
+  - 동사와 키워드
+
+    단항 함수는 함수와 인수가 동사/명사 쌍을 이뤄야 한다. ex) `writeField(name)`
+
+    함수 이름에 키워드를 추가하면서 함수 이름에 인수 이름을 넣는다. ex) `assertExpectedEqualsActual(Expected, actual)`
+
+- **부수 효과를 일으키지 마라!**
+
+  부수 효과가 많은 경우, 시간적인 결합이나 순서 종속성을 초래한다.
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+
+  ```java
+  public class UserValidator {
+    private Cryptographer cryptographer;
+    public boolean checkPassword(String usenName, String password) {
+      User user = UserGateway.findByName(userName);
+      if (user != User.NULL) {
+        String codedPhrase = user.getPhraseEncodedByPassword(); String phrase = cryptographer.decrypt(codedPhrase, password);
+        if ("Valinitializeid Password".equals(phrase)) {
+          Session.initialize(); return true;
+        }
+      } return false;
+    }
+  }
+  ```
+
+    </div>
+  </details>
+
+  위 함수의 부수효과: `Session.initialize();`
+
+  만약 시간적인 결합이 필요하다면 함수 이름에 분명히 명시한다.
+
+  - 출력 인수
+
+    객체지향 언어에서는 출력 인수를 사용할 필요가 거의 없다. 출력 인수로 사용하라고 설계한 변수 `this`가 있기 때문이다.
+
+    일반적으로 출력 인수는 피해야 한다. 함수에서 상태를 변경해야 한다면 함수가 속한 객체 상태를 변경하는 방식을 택한다.
+
+- **명령과 조희를 분리하라!**
+
+  함수는 객체 상태를 변경하거나, 객체 정보를 반환하거나 둘 중 하나만 해야 한다.
+
+  아래 코드처럼 명령과 조회를 분리해서 혼란을 애초에 뿌리뽑아야 한다.
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+  ```java
+  // Bad
+  if(set("username", "namget"))....
+  
+    // Good
+  if(attributeExist("username")){
+    setAttribute("username", "namget");
+  }
+  ```
+
+    </div>
+  </details>
+
+- **오류 코드보다 예외를 사용하라!**
+
+  명령 함수에서 오류 코드를 반환하는 방식은 명령/조회 분리 규칙을 미묘하게 위반한다. if문에서 명령을 표현식으로 사용하기 쉬운 탓이다.
+
+  오류 코드 대신 예외를 사용해 오류 처리 코드를 원래 코드에서 분리하여 코드를 깔끔하게 만든다.
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+  ```java
+  public void delete(Page page) {
+    try {
+      deletePage(page);
+      registry.deleteReference(page.name);
+      configKyes.deleteKey(page.name.makeKey());
+    } catch (Exception e) {
+      logger.log(e.getMessage());
+    }
+  }
+  ```
+
+    </div>
+  </details>
+
+  - Try/Catch 블록 뽑아내기
+
+    try/catch는 코드 구조에 혼란을 일으키며 정상 동작과 오류 처리 동작을 뒤섞는다.
+
+    따라서 try/catch 블록을 별도 함수로 뽑아내는것이 좋다.
+
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
+
+    ```java
+    public void delete(Page page) {
+      try {
+        deletePageAndAllReferences(page);
+      } catch (Exception e) {
+        logError(e);
+      }
+    }
+    
+    private void deletePageAndAllReferences(Page page) throws Exception {
+      deletePage(page);
+      registry.deleteReference(page.name);
+      configKyes.deleteKey(page.name.makeKey());
+    }
+    
+    private void logError(Exception e) {
+      logger.log(e.getMessage());
+    }
+    ```
+
+      </div>
+    </details>
+
+  - 오류 처리도 한 가지 작업이다.
+
+    함수는 한 가지 작업만 하고, 오류 처리도 한 가지 작업에 속한다.
+
+  - `Error,java` 의존성 자석
+
+    <details>
+      <summary> code </summary>
+      <div markdown="1">
+
+    ```java
+    public enum Error {
+      OK,
+      INVALID,
+      N0_SUCH,
+      LOCKED,
+      0UT_0F_RES0URCES,
+      WAITING_FOR_EVENT;
+    }
+    ```
+
+      </div>
+    </details>
+
+    위와 같은 클래스는 의존성 자석이다. 다른클래스에서 Error enum을 import하고, Error enum이 변경되면 Error enum을 사용하는 클래스 전부 다시 컴파일하고 배치해야한다.
+
+    오류코드 대신 예외를 사용하면 재컴파일/재배치 없이도 새 예외 클래스를 추가할 수 있다. (OCP를 보여주는 예)
+
+- **반복하지 마라!**
+
+  중복을 없앴더니 모듈 가독성이 크게 높아졌다. 중복은 소프트웨어에서 모든 악의 근원이다. 
+
+  관계형 데이터베이스의 정규 형식, 구조적 프로그래밍, AOP, COP 모두 중복 제거 전략이다.
+
+- **구조적 프로그래밍**
+
+  모든 함수와 함수는 입구와 출구는 하나만 존재한다. 루프 안에서 break, continue를 사용해선 안 되며 goto는 절대로, 절대로 안 된다.
+
+  하지만, 위 규칙은 함수가 아주 클 때만 상당한 이익을 제공한다. 함수를 작게 만든다면 return , break, continue를 여러차례 사용해도 괜찮고, 때로는 단일 입/출구 규칙보다 의도를 표현하기 쉬워진다.
+
+  goto문은 큰 함수에서만 의미가 있으므로, 작은 함수에서는 피해야만 한다.
+
+- **함수를 어떻게 짜죠?**
+
+  서투른 코드를 빠짐없이 테스트하는 단위 테스트 케이스도 만든다.
+
+  다음, 코드를 다듬고, 함수를 만들고, 이름을 바꾸고, 중북을 제거한다. 메서드를 줄익도, 순서를 바꾸며, 때로는 전체클래스를 쪼갠다. 그리고 코드는 항상 단위 테스트를 통과한다.
 
 ### 📌 소감 및 생각
 
-
+코드들을 살펴보면서 저자가 말하고자하는 바들을 잘 알 수 있었다. 특히 이름의 중요성을 많이 느꼈는데, 그 동안 이름을 약어로 많이 썼었는데 반성해야겠다. 그리고 자바는 아직 접한 적 없는 언어인데, 코드를 읽는데 아직까지는 큰 무리가 없어서 다행이었다.
 
 ### 🔎 새롭게 배운 개념
 
 - 추상화 수준: 말 그대로 구체적으로 풀어 쓰기보다는 추상적으로 표현되어 있다면 추상화 수준이 높고, 추상화 되어 있지 않고 직접적인 코드는 추상화 수준이 낮다.
+- [SRP(Single Responsibility Principle)](https://blog.itcode.dev/posts/2021/08/13/single-responsibility-principle): 단일 책임 원칙, 하나의 객체는 반드시 하나의 동작만의 책임을 갖는다는 원칙.
+- [OCP(Open-Closed Principle)](https://blog.itcode.dev/posts/2021/08/14/open-closed-principle): 개방-폐쇄 원칙, 객체의 확장은 개방적으로, 객체의 수정은 폐쇄적으로 대하는 원칙.
+- 플래그 인수: 부울값을 넘기게 되면 함수가 여러가지를 처리한다는 의미.
+- [AOP(Aspect Oriented Programming)](https://3months.tistory.com/74): 관점 지향 소프트웨어 공학, 또는 상황중심 프로그래밍으로 번역되는 하나의 프로그래밍 방법론으로 객체지향 코드 위에서 이루어지며 객체지향을 보조하는 역할을 한다.
+- [COP(Component Oriented Programming)](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8_%EA%B8%B0%EB%B0%98_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%ED%95%99): 컴포넌트 기반 소프트웨어 공학, 기존의 시스템이나 소프트웨어를 구성하는 컴포넌트를 조립해서 하나의 새로운 응용 프로그램을 만드는 소프트웨어 개발방법론
+- 단일 입/출구 규칙(single entry-exit rule): 모든 블록에 입구와 출구는 하나만 존재해야 한다.
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
