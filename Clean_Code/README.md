@@ -8,7 +8,7 @@
 >
 >  [2. 의미있는 이름](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#2-%EC%9D%98%EB%AF%B8%EC%9E%88%EB%8A%94-%EC%9D%B4%EB%A6%84)
 >
->  [3. 함수]
+>  [3. 함수](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#3-%ED%95%A8%EC%88%98)
 >
 >  [4. 주석]
 >
@@ -627,7 +627,7 @@
     Circle makeCircle(Point center, double radius);
     // x, y를 묶어 하나의 클래스 변수로 넘기려면 결국 이름을 지어야하고, 결국은 개념을 표현하게 된다.
     ```
-
+    
       </div>
     </details>
 
@@ -822,6 +822,28 @@
 - [AOP(Aspect Oriented Programming)](https://3months.tistory.com/74): 관점 지향 소프트웨어 공학, 또는 상황중심 프로그래밍으로 번역되는 하나의 프로그래밍 방법론으로 객체지향 코드 위에서 이루어지며 객체지향을 보조하는 역할을 한다.
 - [COP(Component Oriented Programming)](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8_%EA%B8%B0%EB%B0%98_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%EA%B3%B5%ED%95%99): 컴포넌트 기반 소프트웨어 공학, 기존의 시스템이나 소프트웨어를 구성하는 컴포넌트를 조립해서 하나의 새로운 응용 프로그램을 만드는 소프트웨어 개발방법론
 - 단일 입/출구 규칙(single entry-exit rule): 모든 블록에 입구와 출구는 하나만 존재해야 한다.
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
+
+---
+
+## 4. 주석
+
+> Day 07 (Feb 24, 2022)
+>
+> Day 08 (Feb 25, 2022)
+
+### :book: 기억하고 싶은 책 내용
+
+- 
+
+### 📌 소감 및 생각
+
+
+
+### 🔎 새롭게 배운 개념
+
+- 
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
