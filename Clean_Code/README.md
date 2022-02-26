@@ -10,11 +10,15 @@
 >
 >  [3. 함수](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#3-%ED%95%A8%EC%88%98)
 >
->  [4. 주석]
+>  [4. 주석](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#4-%EC%A3%BC%EC%84%9D)
 >
 >  [5. 형식 맞추기]
 >
 >  [6. 객체와 자료 구조]
+>
+>  ...
+>
+>  [Missions]
 
 ## 0. 추천사 & 들어가면서
 
@@ -396,7 +400,7 @@
     </div>
   </details>
 
-  - 블록과 들여쓰기
+  - **블록과 들여쓰기**
 
     if 문/else /while 문 등에 들어가는 블록은 한 줄어야 한다.
 
@@ -492,7 +496,7 @@
       </div>
     </details>
 
-  - 위에서 아래로 코드 읽기: **내려가기 규칙**
+  - **위에서 아래로 코드 읽기: 내려가기 규칙**
 
     코드는 위에서 아래로 이야기까지 읽혀야 좋다.
 
@@ -523,10 +527,10 @@
   }
   ```
 
-    </div>
-  </details>
+  </div>
+</details>
 
-  위 함수 문제점
+  **위 함수 문제점**
 
   1. 함수가 너무 길다.
   2. 한가지 작업만 수행하지 않는다.
@@ -538,8 +542,6 @@
   <details>
     <summary> code </summary>
     <div markdown="1">
-
-
   ```java
   public abstract class Employee {
     public abstract boolean isPayday();
@@ -567,8 +569,8 @@
   }
   ```
 
-    </div>
-  </details>
+  </div>
+</details>
 
   하지만 위 규칙을 완벽하게 지키기는 어렵다.
 
@@ -588,7 +590,7 @@
 
   테스트 관점에서 보면 인수는 더 어렵다. 갖가지 인수 조합으로 함수를 검증하는 테스트 케이스를 작성해야하기 때문이다.
 
-  - 많이 쓰는 단항 형식
+  - **많이 쓰는 단항 형식**
 
     함수에 인수 1개를 넘기는 이유
 
@@ -601,27 +603,26 @@
 
     ex) `StringBuffer`를 함수의 인수로 넘기는 것을 피한다. 변환함수에서 출력인수를 사용하면 혼란을 일으킨다.
 
-  - 플래그 인수
+  - **플래그 인수**
 
     함수가 헌꺼번에 여러 가지를 처리한다고 대놓고 공표하는 셈으로 되도록 사용하지 않기.
 
-  - 이항 함수
+  - **이항 함수**
 
     인수가 2개인 함수는 인수가 1개인 함수보다 이해하기 어렵다.
 
     불가피한 상황이 아니라면 위험이 따른다는 사실을 이해하고 가능하면 단항으로 변경해야한다.
 
-  - 삼항 함수
+  - **삼항 함수**
 
-  - 인수 객체
+  - **인수 객체**
 
     인수가 2~3개 필요하다면, 그 중 일부를 묶어 하나의 클래스 변수로 선언할 수도 있다.
 
     <details>
       <summary> code </summary>
       <div markdown="1">
-
-
+    
     ```java
     Circle makeCircle(double x, double y, double radius);
     Circle makeCircle(Point center, double radius);
@@ -631,13 +632,13 @@
       </div>
     </details>
 
-  - 인수 목록
+  - **인수 목록**
 
     때로는 인수가 가변적인 함수도 필요하다. ex) `String.format`
 
     가변인수를 통해 리스트형 인수를 하나로 취급할 수 있다.
 
-  - 동사와 키워드
+  - **동사와 키워드**
 
     단항 함수는 함수와 인수가 동사/명사 쌍을 이뤄야 한다. ex) `writeField(name)`
 
@@ -650,8 +651,7 @@
   <details>
     <summary> code </summary>
     <div markdown="1">
-
-
+  
   ```java
   public class UserValidator {
     private Cryptographer cryptographer;
@@ -666,7 +666,7 @@
     }
   }
   ```
-
+  
     </div>
   </details>
 
@@ -674,7 +674,7 @@
 
   만약 시간적인 결합이 필요하다면 함수 이름에 분명히 명시한다.
 
-  - 출력 인수
+  - **출력 인수**
 
     객체지향 언어에서는 출력 인수를 사용할 필요가 거의 없다. 출력 인수로 사용하라고 설계한 변수 `this`가 있기 때문이다.
 
@@ -728,7 +728,7 @@
     </div>
   </details>
 
-  - Try/Catch 블록 뽑아내기
+  - **Try/Catch 블록 뽑아내기**
 
     try/catch는 코드 구조에 혼란을 일으키며 정상 동작과 오류 처리 동작을 뒤섞는다.
 
@@ -835,44 +835,290 @@
 
 ### :book: 기억하고 싶은 책 내용
 
-- 주석은 나쁜 코드를 보안하지 못한다. 표현력이 풍부하고 깔끔하며 주석이 거의 없는 코드가 복잡하고 어수선하며 주석이 많이 달린코드보다 훨씬 좋다. 자신이 저지른 난장판을 주석으로 설명하려 애쓰는 대신에 그 난장판을 깨끗히 치우는데 시간을 보내라.
-- 코드로 의도를 표현하라.
+- 나쁜 코드에 주석을 달지 마라. 새로 짜라. - 브라이언 W. 커니헨,  P.J.플라우거
+- 잘 달린 주석은 그 어떤 정보보다 유용하다. 경솔하고 근거 없는 주석은 코드를 이해하기 어렵게 만든다. 오래되고 조잡한 주석은 거짓과 잘못된 정보를 퍼뜨려 해악을 미친다.
+
+- **주석은 나쁜 코드를 보완하지 못한다**
+
+  표현력이 풍부하고 깔끔하며 주석이 거의 없는 코드가, 복잡하고 어수선하며 주석이 많이 달린 코드보다 훨씬 좋다. 
+
+  자신이 저지른 난장판을 주석으로 설명하려 애쓰는 대신에 그 난장판을 깨끗히 치우는데 시간을 보내라.
+
+- **코드로 의도를 표현하라!**
+
+  <details>
+    <summary> code </summary>
+    <div markdown="1">
+
+
+  ```java
+  // Bad
+  // 직원에게 복지 혜택을 받을 자격이 있는지 검사한다.
+  if ((employee.flags & HOURLY_FLAG) &&
+     (employee.age > 65))
+  
+  // Good
+  if (employee.isEligibleForFullBenefits())
+  ```
+
+    </div>
+  </details>
+
 - **좋은 주석**
-  1. 법적인 주석
-  2. 정보를 제공하는 주석
-  3. 의도를 설명하는 주석
-  4. 의미를 명료하게 밝히는 주석
-  5. 결과를 경고하는 주석
-  6. TODO(앞으로 할 일) 주석
-  7. 중요성을 강조하는 주석
-  8. 공개 API에서 Javadocs
+
+  정말로 좋은 주석은, 주석을 달지 않을 방법을 찾아낸 주석이다!
+
+  1. **법적인 주석**
+
+     법적인 이유로 특정 주석을 넣으라고 명시하는 경우
+
+     각 소스 파일 첫머리에 주석으로 들어가는 저작권 정보와 소유권 정보
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     // Copyright (C) 2003, 2004, 2005 by Object Montor, Inc. All right reserved.
+     // GNU General Public License
+     ```
+
+       </div>
+     </details>
+
+  2. **정보를 제공하는 주석**
+
+     기본적인 정보를 주석으로 제공하면 편리
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     // 테스트 중인 Responder 인스턴스를 반환
+     protected abstract Responder responderInstance();
+     
+     // 물론 주석도 함수 이름에 정보를 담아 responderBeingTested로 바꾸면 다음과 같이 없앨 수 있다.
+     
+     // Better
+     // kk:mm:ss EEE, MMM dd, yyyy 형식이다.
+     Pattern timeMatcher = Pattern.compile("\\d*:\\d*\\d* \\w*, \\w*, \\d*, \\d*");
+     ```
+
+       </div>
+     </details>
+
+  3. **의도를 설명하는 주석**
+
+     코드를 짜면서 개발자의 결정에 깔린 의도를 설명하는 주석
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     // 스레드를 대량 생성하는 방법으로 어떻게든 경쟁 조건을 만들려 시도한다.
+     for (int i = 0; i > 2500; i++) {
+       WidgetBuilderThread widgetBuilderThread =
+         new WidgetBuilderThread(widgetBuilder, text, parent, failFlag);
+       Thread thread = new Thread(widgetBuilderThread);
+       thread.start();
+     }
+     ```
+
+       </div>
+     </details>
+
+  4. **의미를 명료하게 밝히는 주석**
+
+     인수나 반환값이 표준 라이브러리나 변경하지 못하는 코드에 속할 때, 의미를 명료하게 밝히는 주석이 유용
+
+     주석이 올바른지 검증하기 어렵다. 이는 의미를 명료히 밝히는 주석이 필요한 이유인 경우, 주석이 위험한 이유이기도 하다.
+
+     주석을 달때는 더 나은 방법이 없는지를 고민하고 정확히 달도록 주의해야한다.
+
+  5. **결과를 경고하는 주석**
+
+     다른 프로그래머에게 결과를 경고 할 목적으로 주석 사용
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     // 여유 시간이 충분하지 않다면 실행하지 마십시오.
+     public void _testWithReallyBigFile() {
+       ...
+     }
+     
+     public static SimpleDateFormat makeStandardHttpDateFormat() {
+       // SimpleDateFormat은 스레드에 안전하지 못하므로, 각 인스턴스를 독립적으로 생성해야한다.
+       SimpleDateFormat df = new SimpleDateFormat(".......");
+       return df;
+     }
+     ```
+
+       </div>
+     </details>
+
+  6. **TODO(앞으로 할 일) 주석**
+
+     프로그래머가 필요하다 여기지만 당장 구현하기 어려운 업무를 기술하는 주석
+
+     주기적으로 TODO 주석을 점검해 없애도 괜찮은 주석을 없애라.
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     //TODO-MdM 현재 필요하지 않다.
+     protected VersionInfo makeVersion() throws Exception {
+       return null;
+     }
+     ```
+
+       </div>
+     </details>
+
+  7. **중요성을 강조하는 주석**
+
+     대수롭지 않다고 여겨질 뭔가의 중요성을 강조하기 위해서도 사용
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     String ListItemContent = match.group(3).trim();
+     //여기서 trim은 정말 중요하다.trim 함수는 문자열에서 시작 공백을 제거한다
+     //문자열에 시작 공백이 잇으면 다른 문자열로 인식되기 때문이다.
+     new ListItemWidget(this, listItemContent, this.level + 1);
+     return buildList(text.substring(match.end()));
+     ```
+
+       </div>
+     </details>
+
+  8. **공개 API에서 Javadocs**
+
+     설명이 잘 된 공개 API는 참으로 유용하고 만족스럽다.
+
+     공개 API를 구현한다면 반드시 훌륭한 Javadocs를 작성한다.
+
+     하지만 여느 주석과 마찬가지로 Javadocs 역시 독자를 오도하거나, 잘못 위치하거나, 그릇된 정보를 전달할 가능성이 존재한다.
+
 - **나쁜 주석**
-  1. 주절거리는 주석
-  2. 같은 이야기를 중복하는 주석
-  3. 오해할 여지가 있는 주석
-  4. 의무적으로 다는 주석
-  5. 이력을 기록하는 주석
-  6. 있으나 마나 한 주석 => 함수나 변수로 표현 할 수 있다면 주석을 달지 말라
-  7. 위치를 표시하는 주석
-  8. 닫는 괄호에 다는 주석
-  9. 공로를 돌리거나 저자를 표시하는 주석
-  10. 주석으로 처리한 코드
-  11. HTML 주석
-  12. 전역 정보 (근처에 있는 코드만 주석으로 달 것 => 시스템의 전반적인 정보를 기술하지 마라
-  13. 너무 많은 정보
-  14. 흥미로운 역사나 정보
-  15. 모호한 관계 (코드를 설명하기 위해 주석이 존재하는데 주석에 설명이 필요해선 안된다.)
-  16. 함수헤더 (이름을 잘 지은 함수는 주석이 필요하지 않다.)
-  17. 비공개 코드에서 Javadocs
+
+  1. **주절거리는 주석**
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     public void loadProperties() {
+       try {
+         String propertiesPath = propertiesLocation + "/" + PROPERTIES_FILE;
+         FileInputStream propertiesStream = new FileInputStream(propertiesPath);
+         loadedProperties.load(propertiesStream);
+       } catch (IOException e) {
+         // 속성 파일이 없다면 기본값을 모두 메모리로 읽어 들였다는 의미다.
+       }
+     }
+     ```
+
+       </div>
+     </details>
+
+     이해가 안 되어 다른 모듈까지 뒤져야 하는 주석은 독자와 제대로 소통하지 못하는 주석이다.
+
+  2. **같은 이야기를 중복하는 주석**
+
+     코드의 내용을 그대로 중복하는 주석. 전혀 필요없는 코드이다.
+
+     <details>
+       <summary> code </summary>
+       <div markdown="1">
+
+     ```java
+     // this.closed가 true일 때 반환되는 유틸리티 메서드다.
+     // 타임아웃에 도달하면 예외를 던진다.
+     public synchronized void waitForClose(final long timeoutMillis) throws Exception {
+       if (!closed) {
+         wait(timeoutMillis);
+         if (!closed) {
+           throw new Exception("MockResponseSender could not be closed");
+         }
+       }
+     }
+     ```
+
+       </div>
+     </details>
+
+  3. **오해할 여지가 있는 주석**
+
+     실제 코드가 동작하는 것과 살짝 다른 정보로 주석이 달려있을 경우
+
+  4. **의무적으로 다는 주석**
+
+  5. **이력을 기록하는 주석**
+
+  6. **있으나 마나 한 주석**
+
+     함수나 변수로 표현 할 수 있다면 주석을 달지 말라
+
+  7. **위치를 표시하는 주석**
+
+  8. **닫는 괄호에 다는 주석**
+
+  9. **공로를 돌리거나 저자를 표시하는 주석**
+
+  10. **주석으로 처리한 코드**
+
+  11. **HTML 주석**
+
+  12. **전역 정보**
+
+      근처에 있는 코드만 주석으로 달 것 => 시스템의 전반적인 정보를 기술하지 마라
+
+  13. **너무 많은 정보**
+
+  14. **흥미로운 역사나 정보**
+
+  15. **모호한 관계**
+
+      코드를 설명하기 위해 주석이 존재하는데 주석에 설명이 필요해선 안된다.
+
+  16. **함수헤더**
+
+      이름을 잘 지은 함수는 주석이 필요하지 않다.
+
+  17. **비공개 코드에서 Javadocs**
 
 ### 📌 소감 및 생각
 
-이번 내용은 영어가 주언어가 아닌 사람으로써 저자의 주장에 조금 애매한 감이 있다. 그래도 세계적으로 넓게 보았을 때, 저자의 말에 공감하고 영어 공부를 더 많이 해야겠다는 생각이 들었다.
+이번 내용은 영어가 주언어가 아닌 사람으로써 저자의 주장에 조금 애매한 감이 있었다. 그래도 세계적으로 넓게 보았을 때, 저자의 말에 공감하고 영어 공부를 더 많이 해야겠다는 생각이 들었다.
 
 ### 🔎 새롭게 배운 개념
 
 - 쉰들러 리스트
-- Javadocs
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
+
+---
+
+
+
+---
+
+## Missions
+
+|                           Mission                            | Topics                                                       |
+| :----------------------------------------------------------: | ------------------------------------------------------------ |
+| [Mission 01](https://github.com/lisy0123/Nomadcoders/blob/main/Clean_Code/mission01.md) | `Pick Top 3 Best TIL`                                        |
+| [Mission 02](https://github.com/lisy0123/Nomadcoders/blob/main/Clean_Code/mission02.md) | `1. Use searchable names`<br />`2. Use meaningful and pronounceable variable names`<br />`3. Don't add unneeded context` |
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
