@@ -4,7 +4,7 @@
 >
 > Day 10 (Feb 27, 2022)
 
-## :one: mission 01
+## :one:
 
 ```java
 // BAD 더러운 코드 😣
@@ -29,7 +29,7 @@ setTimeout(blastOff, MILLISECONDS_PER_DAY);
 
 ---
 
-## :two: mission 02
+## :two:
 
 ```java
 // BAD 더러운 코드 😣
@@ -49,7 +49,7 @@ const currentDate - moment().format("YYYY/MM/DD");
 
 ---
 
-## :three: mission 03
+## :three:
 
 ```java
 // BAD 더러운 코드 😣
@@ -83,3 +83,4 @@ function paintCar(car, color) {
 // 클래스/개체 이름을 통해 알 수 있는 경우, 불필요한 반복 제거.
 ```
 
+[↩️ Go Back](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code)
