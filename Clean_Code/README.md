@@ -509,8 +509,7 @@
   <details>
     <summary> code </summary>
     <div markdown="1">
-
-
+  
   ```java
   public Money calculatePay(Employee e)
     throws InvalidEmplᄋyeeType {
@@ -526,33 +525,34 @@
     }
   }
   ```
-
-  </div>
-</details>
-
+  
+    </div>
+  </details>
+  
   **위 함수 문제점**
-
+  
   1. 함수가 너무 길다.
   2. 한가지 작업만 수행하지 않는다.
   3. SRP 위반: 코드의 변경이유가 여럿이다.
   4. OCP 위반: 새 직업의 유형이 추가 될 때마다 코드 변경 필요.
-
+  
   개선한 코드는 다음과 같다.
-
+  
   <details>
     <summary> code </summary>
     <div markdown="1">
+  
   ```java
   public abstract class Employee {
     public abstract boolean isPayday();
     public abstract Money calculatePay();
     public abstract void deliverPay(Money pay);
   }
-
+  
   public interface EmployeeFactory {
     public Employee makeEmployee(EmployeeRecord r) throws InvalidEmployeeType;
   }
-
+  
   public class EmployeeFactorylmpl implements EmployeeFactory {
     public Employee makeEmployee(EmployeeReco rd r) throws InvalidEmployeeType {
       switch (r.type) {
@@ -568,11 +568,11 @@
     }
   }
   ```
-
-  </div>
-</details>
-
-  하지만 위 규칙을 완벽하게 지키기는 어렵다.
+  
+    </div>
+  </details>
+  
+    하지만 위 규칙을 완벽하게 지키기는 어렵다.
 
 - **서술적인 이름을 사용하라!**
 
@@ -627,8 +627,8 @@
     Circle makeCircle(double x, double y, double radius);
     Circle makeCircle(Point center, double radius);
     // x, y를 묶어 하나의 클래스 변수로 넘기려면 결국 이름을 지어야하고, 결국은 개념을 표현하게 된다.
-  ```
-
+    ```
+    
       </div>
     </details>
 
