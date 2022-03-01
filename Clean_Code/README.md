@@ -12,7 +12,7 @@
 >
 >  [4. 주석](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#4-%EC%A3%BC%EC%84%9D)
 >
->  [5. 형식 맞추기]
+>  [5. 형식 맞추기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#5-%ED%98%95%EC%8B%9D-%EB%A7%9E%EC%B6%94%EA%B8%B0)
 >
 >  [6. 객체와 자료 구조]
 >
@@ -836,6 +836,7 @@
 ### :book: 기억하고 싶은 책 내용
 
 - 나쁜 코드에 주석을 달지 마라. 새로 짜라. - 브라이언 W. 커니헨,  P.J.플라우거
+
 - 잘 달린 주석은 그 어떤 정보보다 유용하다. 경솔하고 근거 없는 주석은 코드를 이해하기 어렵게 만든다. 오래되고 조잡한 주석은 거짓과 잘못된 정보를 퍼뜨려 해악을 미친다.
 
 - **주석은 나쁜 코드를 보완하지 못한다**
@@ -849,8 +850,7 @@
   <details>
     <summary> code </summary>
     <div markdown="1">
-
-
+  
   ```java
   // Bad
   // 직원에게 복지 혜택을 받을 자격이 있는지 검사한다.
@@ -860,7 +860,7 @@
   // Good
   if (employee.isEligibleForFullBenefits())
   ```
-
+  
     </div>
   </details>
 
@@ -1068,8 +1068,7 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-
-  
+     
      ```java
      /**
       * @param title CD 제목
@@ -1086,7 +1085,7 @@
        cdList.add(cd);
      }
      ```
-
+     
        </div>
      </details>
   
@@ -1099,8 +1098,7 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-  
-  
+     
      ```java
      * 변경 이력 (11-Oct-2001부터)
      * ------------------------------------------------
@@ -1108,7 +1106,7 @@
      * 05-Nov-2001: getDescription() 메소드 추가
      * ...
      ```
-  
+     
        </div>
      </details>
   
@@ -1119,8 +1117,7 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-  
-  
+     
      ```java
      /*
       * 기본 생성자
@@ -1128,7 +1125,7 @@
      protected AnnualDateRule() {
      }
      ```
-  
+     
        </div>
      </details>
   
@@ -1139,8 +1136,7 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-  
-  
+     
      ```java
      /** The name. */
      private String name;
@@ -1148,7 +1144,7 @@
      /** The version. */
      private String version;
      ```
-  
+     
        </div>
      </details>
   
@@ -1159,8 +1155,7 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-  
-  
+     
      ```java
      // Bad
      // 전역 목록 <smodule>에 속하는 모듈이 우리가 속한 하위 시스템에 의존하는가?
@@ -1171,7 +1166,7 @@
      String ourSubSystem = subSysMod.getSubSystem();
      if (moduleDependees.contains(ourSubSystem))
      ```
-  
+     
        </div>
      </details>
   
@@ -1182,12 +1177,11 @@
      <details>
        <summary> code </summary>
        <div markdown="1">
-  
-  
+     
      ```java
      // Actions /////////////////////////////////////////////
      ```
-  
+     
        </div>
      </details>
   
@@ -1216,8 +1210,7 @@
       <details>
         <summary> code </summary>
         <div markdown="1">
-  
-  
+      
       ```html
       /*
       <p/>
@@ -1227,7 +1220,7 @@
        </pre>
        */
       ```
-  
+      
         </div>
       </details>
   
@@ -1238,7 +1231,6 @@
       <details>
         <summary> code </summary>
         <div markdown="1">
-  
   
       ```java
       /**
@@ -1288,7 +1280,27 @@
 
 ## 5. 형식 맞추기
 
-> 
+> Day 11 (Feb 28, 2022)
+
+### :book: 기억하고 싶은 책 내용
+
+- 
+
+### 📌 소감 및 생각
+
+포맷팅을 지원해주는 툴을 이용하기 전에 스스로 형식을 맞추는 것이 중요하다고 생각한다. 형식이라는 기본적인 것에서 코드의 깔끔함이 나오는 것이라고 생각한다. 이번 챕터는 어느 정도 유의하고 중요하다고 생각하는 점이 있어 공감이 많이 갔다.
+
+### 🔎 새롭게 배운 개념
+
+- 
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
+
+---
+
+## 6.객체와 자료 구조
+
+> Day 12 (March 1, 2022)
 
 ### :book: 기억하고 싶은 책 내용
 
@@ -1303,6 +1315,10 @@
 - 
 
 [:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
+
+---
+
+## 7. 
 
 ---
 
