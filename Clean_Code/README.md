@@ -16,7 +16,7 @@
 >
 >  [6. 객체와 자료 구조](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#6%EA%B0%9D%EC%B2%B4%EC%99%80-%EC%9E%90%EB%A3%8C-%EA%B5%AC%EC%A1%B0)
 >
->  [7. ]
+>  [7. 오류처리]
 >
 >  [8. ]
 >
@@ -1324,7 +1324,25 @@
 
 ---
 
-## 7.
+## 7. 오류처리
+
+> Day 14 (March 3, 2022)
+>
+> Day 15 (March 4, 2022)
+
+### :book: 기억하고 싶은 책 내용
+
+- 
+
+### 📌 소감 및 생각
+
+
+
+### 🔎 새롭게 배운 개념
+
+- 
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
 ---
 
