@@ -16,13 +16,13 @@
 >
 >  [6. 객체와 자료 구조](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#6%EA%B0%9D%EC%B2%B4%EC%99%80-%EC%9E%90%EB%A3%8C-%EA%B5%AC%EC%A1%B0)
 >
->  [7. 오류처리]
+>  [7. 오류처리](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#7-%EC%98%A4%EB%A5%98%EC%B2%98%EB%A6%AC)
 >
->  [8. 경계]
+>  [8. 경계](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#8-%EA%B2%BD%EA%B3%84)
 >
->  [9. 단위 테스트]
+>  [9. 단위 테스트](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#9-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8)
 >
->  [10. 클래스]
+>  [10. 클래스](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#10-%ED%81%B4%EB%9E%98%EC%8A%A4)
 >
 >  ...
 >
@@ -1412,7 +1412,23 @@
 
 ## 10. 클래스
 
+> Day 19 (March 9, 2022)
+>
+> Day 20 (March 10, 2022)
 
+### :book: 기억하고 싶은 책 내용
+
+- 
+
+### 📌 소감 및 생각
+
+
+
+### 🔎 새롭게 배운 개념
+
+- 
+
+[:arrow_up: 목차로 돌아가기](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code#clean-code)
 
 ---
 
