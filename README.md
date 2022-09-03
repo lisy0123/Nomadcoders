@@ -2,17 +2,7 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## :one: Books
-
-Read developer's recommendation books and write TIL(Today I Learned).
-
-### [**1. Clean Code**](https://github.com/lisy0123/Nomadcoders/tree/main/Clean_Code)
-
-**:heavy_check_mark: Challenge Date: Feb 18, 2022 - Mar 11, 2022**
-
----
-
-## [:two: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
+## [:one: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
 
 Zoom Clone with NodeJS, WebRTC and Websockets
 
@@ -22,15 +12,13 @@ Zoom Clone with NodeJS, WebRTC and Websockets
 
 ---
 
-## [:three: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
+## [:two: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
 
 Momentum Clone with JS
 
-**:heavy_check_mark: Challenge Date:**
-
 ---
 
-## [:four: Web Scrapper](https://github.com/lisy0123/Web_Scrapper)
+## [:three: Web Scrapper](https://github.com/lisy0123/Web_Scrapper)
 
 Web Scrapper with Python
 
@@ -40,7 +28,7 @@ Web Scrapper with Python
 
 ---
 
-## :five: ETC
+## :four: ETC
 
 ### [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
 
