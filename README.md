@@ -2,19 +2,23 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-## [:one: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
+## [:one: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
+
+Momentum Clone with JS
+
+**✔️ Challenge Date: Sep 26, 2022 - Oct 9, 2022**
+
+<img src="https://github.com/lisy0123/Momentum_Clone/blob/main/page1.png" alt="img" style="zoom:65%;" />
+
+---
+
+## [:two: Zoom Clone](https://github.com/lisy0123/Zoom_Clone)
 
 Zoom Clone with NodeJS, WebRTC and Websockets
 
 **:heavy_check_mark: Challenge Date: Dec 27, 2021 - Jan 2, 2022**
 
 <img src="https://github.com/lisy0123/Zoom_Clone/blob/main/img.png" alt="img" width="60%" />
-
----
-
-## [:two: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
-
-Momentum Clone with JS
 
 ---
 
@@ -30,6 +34,12 @@ Web Scrapper with Python
 
 ## :four: ETC
 
+### [:chains: Typescript](https://github.com/lisy0123/Nomadcoders/tree/main/Typescript)
+
+Simple Blockchain with Typescript
+
+**✔️ Challenge Date: Sep 19, 2022 - Oct 2, 2022**
+
 ### [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
@@ -39,10 +49,6 @@ Weather app with **[React Native](https://reactnative.dev/)** using **[openweath
 ### [:art: Painter](https://github.com/lisy0123/Nomadcoders/tree/main/Painter)
 
 Painting Board made with VaillaJS
-
-### [:chains: Typechain](https://github.com/lisy0123/Nomadcoders/tree/main/Typechain)
-
-Simple Blockchain with Typescript
 
 [↩️ Go Back](https://github.com/lisy0123/Study)
 
