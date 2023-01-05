@@ -2,7 +2,7 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
-# :zero: Preview
+## :zero: Preview
 
 **[Momentum Clone](https://lisy0123.github.io/Momentum_Clone/)**  **|**  [**Zoom Clone**](https://codesandbox.io/s/zoom-03-llzq7)  **|**  [**Web Scrapper**](https://day-thirteen-and-fourteen--lisy0123.repl.co/)  **|**  **[TODOList](https://lisy0123.github.io/TODOList/)**
 
