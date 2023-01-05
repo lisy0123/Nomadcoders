@@ -18,7 +18,7 @@ Zoom Clone with NodeJS, WebRTC and Websockets
 
 **:heavy_check_mark: Challenge Date: Dec 27, 2021 - Jan 2, 2022**
 
-<img src="https://github.com/lisy0123/Momentum_Clone/blob/main/page1.png" alt="img" style="zoom:60%;" />
+<img src="https://github.com/lisy0123/Zoom_Clone/blob/main/img.png" alt="img" style="zoom:60%;" />
 
 ---
 
@@ -38,7 +38,7 @@ Web Scrapper with Python
 
 Todolist app with **[React Native](https://reactnative.dev/)**
 
-<img src="https://github.com/lisy0123/TODOList/blob/master/page.png" width="60%">
+<img src="https://github.com/lisy0123/TODOList/blob/master/page.png" width="50%">
 
 ### [:chains: Typescript](https://github.com/lisy0123/Nomadcoders/tree/main/Typescript)
 
