@@ -8,7 +8,7 @@ Momentum Clone with JS
 
 **✔️ Challenge Date: Sep 26, 2022 - Oct 9, 2022**
 
-<img src="https://github.com/lisy0123/Momentum_Clone/blob/main/page1.png" alt="img" style="zoom:65%;" />
+<img src="https://github.com/lisy0123/Momentum_Clone/blob/main/page1.png" alt="img" style="zoom:60%;" />
 
 ---
 
@@ -18,7 +18,7 @@ Zoom Clone with NodeJS, WebRTC and Websockets
 
 **:heavy_check_mark: Challenge Date: Dec 27, 2021 - Jan 2, 2022**
 
-<img src="https://github.com/lisy0123/Zoom_Clone/blob/main/img.png" alt="img" width="60%" />
+<img src="https://github.com/lisy0123/Momentum_Clone/blob/main/page1.png" alt="img" style="zoom:60%;" />
 
 ---
 
@@ -34,17 +34,21 @@ Web Scrapper with Python
 
 ## :four: ETC
 
+### [✏️ TODOList](https://github.com/lisy0123/TODOList/tree/master)
+
+Todolist app with **[React Native](https://reactnative.dev/)**
+
+<img src="https://github.com/lisy0123/TODOList/blob/master/page.png" width="60%">
+
 ### [:chains: Typescript](https://github.com/lisy0123/Nomadcoders/tree/main/Typescript)
 
 Simple Blockchain with Typescript
 
 **✔️ Challenge Date: Sep 19, 2022 - Oct 2, 2022**
 
-### [:cloud: React Native Weather App](https://github.com/lisy0123/react_native_weather)
+### [:cloud: WeatherApp](https://github.com/lisy0123/Nomadcoders/tree/main/WeatherApp)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
-
-:label: Need to refresh!
 
 ### [:art: Painter](https://github.com/lisy0123/Nomadcoders/tree/main/Painter)
 
