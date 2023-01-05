@@ -2,6 +2,12 @@
 
 Studying python, javascript, react, typescript, ect with **[nomadcoders](https://nomadcoders.co)**
 
+# :zero: Preview
+
+**[Momentum Clone](https://lisy0123.github.io/Momentum_Clone/)**  **|**  [**Zoom Clone**](https://codesandbox.io/s/zoom-03-llzq7)  **|**  [**Web Scrapper**](https://day-thirteen-and-fourteen--lisy0123.repl.co/)  **|**  **[TODOList](https://lisy0123.github.io/TODOList/)**
+
+---
+
 ## [:one: Momentum Clone](https://github.com/lisy0123/Momentum_Clone)
 
 Momentum Clone with JS
@@ -30,23 +36,23 @@ Web Scrapper with Python
 
 <img src="https://github.com/lisy0123/Web_Scrapper/blob/main/Challenge/Day13_14/image/image1.png" width="48%" height="60%"> <img src="https://github.com/lisy0123/Web_Scrapper/blob/main/Challenge/Day13_14/image/image3.png" width="48%" height="60%">
 
----
-
-## :four: ETC
-
-### [✏️ TODOList](https://github.com/lisy0123/TODOList/tree/master)
+## [:four: TODOList](https://github.com/lisy0123/TODOList/tree/master)
 
 Todolist app with **[React Native](https://reactnative.dev/)**
 
 <img src="https://github.com/lisy0123/TODOList/blob/master/page.png" width="50%">
 
-### [:chains: Typescript](https://github.com/lisy0123/Nomadcoders/tree/main/Typescript)
+## [:five: Typescript](https://github.com/lisy0123/Nomadcoders/tree/main/Typescript)
 
 Simple Blockchain with Typescript
 
 **✔️ Challenge Date: Sep 19, 2022 - Oct 2, 2022**
 
-### [:cloud: WeatherApp](https://github.com/lisy0123/Nomadcoders/tree/main/WeatherApp)
+---
+
+## :six: ETC
+
+### [:cloud: WeatherApp](https://github.com/lisy0123/WeatherApp)
 
 Weather app with **[React Native](https://reactnative.dev/)** using **[openweathermap api](https://openweathermap.org/api)**
 
